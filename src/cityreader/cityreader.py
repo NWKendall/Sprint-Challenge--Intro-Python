@@ -1,5 +1,5 @@
 import csv
-import decimal
+from decimal import *
 import math
 
 # Create a class to hold a city location. Call the class "City". It should have
@@ -28,9 +28,9 @@ class City:
 cities = []
 
 
-def zero_strip(n):
-    s = str(decimal.Decimal(n))
-    return float(s.rstrip('0').rstrip('.') if '.' in s else s)
+# def zero_strip(n):
+#     s = str(Decimal(n))
+#     return float(s.rstrip('0').rstrip('.') if '.' in s else s)
 
 
 def cityreader(cities=[]):
@@ -41,8 +41,8 @@ def cityreader(cities=[]):
         csv_reader = csv.reader(csv_file)
         next(csv_reader)
         for city_info in csv_reader:
-            cities.append(City(city_info[0], zero_strip(
-                city_info[3]), zero_strip(city_info[4])))
+            cities.append(City(city_info[0], float(
+                city_info[3]), float(city_info[4])))
     return cities
 
 
