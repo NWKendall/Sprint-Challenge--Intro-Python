@@ -32,8 +32,8 @@ class GroundVehicle(Vehicle):
     def __init__(self):
         pass
 
-# Grandchild classes
-# Flight
+# Grandchild classes - Flight
+
 class Starship(FlightVehicle):
     def __init__(self):
         pass
@@ -42,7 +42,7 @@ class Airplane(FlightVehicle):
     def __init__(self):
         pass
 
-# Ground
+# Grandchild classes - Ground
 class Car(GroundVehicle):
     def __init__(self):
         pass
